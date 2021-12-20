@@ -21,7 +21,11 @@ const Dempapp = NativeModules.Dempapp
 export function multiply(a: number, b: number): Promise<number> {
   return Dempapp.multiply(a, b);
 }
-
+((a:number,b:number)=>{
+  multiply(a, b).then(result=>{
+    console.log(result);
+  })
+})(33,23);
 // export function init(){
 //   DEMPAPP.init(Dempapp)
 // }
