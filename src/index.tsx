@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+// import {DEMPAPP} from "./DEMPAPP";
 
 const LINKING_ERROR =
   `The package 'dempapp' doesn't seem to be linked. Make sure: \n\n` +
@@ -20,3 +21,7 @@ const Dempapp = NativeModules.Dempapp
 export function multiply(a: number, b: number): Promise<number> {
   return Dempapp.multiply(a, b);
 }
+
+// export function init(){
+//   DEMPAPP.init(Dempapp)
+// }
